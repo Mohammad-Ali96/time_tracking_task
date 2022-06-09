@@ -40,17 +40,17 @@ class AppTheme {
         elevation: 0,
         titleTextStyle: TextStyle(
             color: appColorScheme.primaryFontColor,
-            fontFamily: 'Cairo',
-            height: 1.4),
+            fontFamily: 'Butler',
+            height: 1.0),
       ),
       textTheme: Theme.of(context).textTheme.apply(
             displayColor: appColorScheme.primaryFontColor,
             bodyColor: appColorScheme.secondaryFontColor,
-            fontFamily: 'Cairo',
+            fontFamily: 'Butler',
           ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
-          padding: MaterialStateProperty.all(const EdgeInsets.all(16)),
+          padding: MaterialStateProperty.all(const EdgeInsets.all(18)),
           overlayColor: MaterialStateProperty.all(
               appColorScheme.buttonTextColor.withAlpha(50)),
           foregroundColor:
@@ -63,15 +63,15 @@ class AppTheme {
           )),
           textStyle: MaterialStateProperty.all(TextStyle(
             color: appColorScheme.buttonTextColor,
-            fontSize: 16,
-            fontFamily: 'Cairo',
-            height: 1.4,
+            fontSize: 18,
+            fontFamily: 'Butler',
+            height: 1.0,
           )),
         ),
       ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: ButtonStyle(
-          padding: MaterialStateProperty.all(const EdgeInsets.all(16)),
+          padding: MaterialStateProperty.all(const EdgeInsets.all(18)),
           overlayColor: MaterialStateProperty.all(
               appColorScheme.accentColor.withAlpha(50)),
           foregroundColor:
@@ -87,14 +87,14 @@ class AppTheme {
           )),
           textStyle: MaterialStateProperty.all(TextStyle(
             color: appColorScheme.accentColor,
-            fontSize: 16,
-            fontFamily: 'Cairo',
-            height: 1.4,
+            fontSize: 18,
+            fontFamily: 'Butler',
+            height: 1.0,
           )),
         ),
       ),
       unselectedWidgetColor: appColorScheme.infoTextColor,
-      fontFamily: 'Cairo',
+      fontFamily: 'Butler',
     );
   }
 
