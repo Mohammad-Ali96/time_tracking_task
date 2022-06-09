@@ -371,13 +371,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "0.15.0"
-  http_mock_adapter:
-    dependency: "direct dev"
-    description:
-      name: http_mock_adapter
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.3.3"
   http_multi_server:
     dependency: transitive
     description:
@@ -470,7 +463,7 @@ packages:
     source: hosted
     version: "2.0.0"
   logger:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: logger
       url: "https://pub.dartlang.org"
@@ -511,13 +504,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.2"
-  mockito:
-    dependency: "direct dev"
-    description:
-      name: mockito
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.2.0"
   nested:
     dependency: transitive
     description:
