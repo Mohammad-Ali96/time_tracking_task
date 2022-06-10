@@ -12,8 +12,8 @@ enum TaskTypeModel {
   exercise,
   @JsonValue('Social')
   social,
-  @JsonValue('Self Car')
-  selfCar
+  @JsonValue('Self Care')
+  selfCare
 }
 
 extension MapToDomain on TaskTypeModel {

@@ -9,13 +9,13 @@ part of 'task_info_model.dart';
 TaskInfoModel _$TaskInfoModelFromJson(Map<String, dynamic> json) =>
     TaskInfoModel(
       timeFrames:
-          TimeFramesModel.fromJson(json['timeFrames'] as Map<String, dynamic>),
+          TimeFramesModel.fromJson(json['timeframes'] as Map<String, dynamic>),
       title: $enumDecode(_$TaskTypeModelEnumMap, json['title']),
     );
 
 Map<String, dynamic> _$TaskInfoModelToJson(TaskInfoModel instance) =>
     <String, dynamic>{
-      'timeFrames': instance.timeFrames,
+      'timeframes': instance.timeFrames,
       'title': _$TaskTypeModelEnumMap[instance.title],
     };
 
@@ -25,5 +25,5 @@ const _$TaskTypeModelEnumMap = {
   TaskTypeModel.study: 'Study',
   TaskTypeModel.exercise: 'Exercise',
   TaskTypeModel.social: 'Social',
-  TaskTypeModel.selfCar: 'Self Car',
+  TaskTypeModel.selfCare: 'Self Care',
 };

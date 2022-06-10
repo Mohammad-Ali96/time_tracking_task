@@ -7,7 +7,6 @@ import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:logger/logger.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-
 @module
 abstract class InjectableModule {
   @lazySingleton
@@ -17,8 +16,6 @@ abstract class InjectableModule {
   @preResolve
   @lazySingleton
   Future<SharedPreferences> get sharedPref => SharedPreferences.getInstance();
-
-
 
   @lazySingleton
   Dio get dioInstance {
@@ -53,6 +50,12 @@ abstract class InjectableModule {
     dio.interceptors.add(
       InterceptorsWrapper(
         onRequest: (request, handler) async {
+          Map<String, String> headers = {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          };
+          request.headers.addAll(headers);
+
           request.sendTimeout = 60000;
           request.connectTimeout = 60000;
           request.receiveTimeout = 60000;
@@ -65,9 +68,6 @@ abstract class InjectableModule {
     return dio;
   }
 
-
   @lazySingleton
   Logger get logger => Logger();
-
-
 }

@@ -22,7 +22,9 @@ import 'features/home_page/data/repository/home_repository_impl.dart' as _i13;
 import 'features/home_page/domain/repository/home_repository.dart' as _i12;
 import 'features/home_page/domain/usecases/get_tasks_list_use_case.dart'
     as _i14;
-import 'injectable_module.dart' as _i15;
+import 'features/home_page/presentation/blocs/task_list/task_list_bloc.dart'
+    as _i15;
+import 'injectable_module.dart' as _i16;
 
 const String _dev = 'dev';
 const String _staging = 'staging';
@@ -58,7 +60,9 @@ Future<_i1.GetIt> $initGetIt(_i1.GetIt get,
       get<_i7.Logger>()));
   gh.lazySingleton<_i14.GetTasksListUseCase>(
       () => _i14.GetTasksListUseCase(get<_i12.HomeRepository>()));
+  gh.factory<_i15.TaskListBloc>(() =>
+      _i15.TaskListBloc(getTasksListUseCase: get<_i14.GetTasksListUseCase>()));
   return get;
 }
 
-class _$InjectableModule extends _i15.InjectableModule {}
+class _$InjectableModule extends _i16.InjectableModule {}

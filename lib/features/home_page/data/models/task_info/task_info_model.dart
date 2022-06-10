@@ -7,6 +7,7 @@ part 'task_info_model.g.dart';
 
 @JsonSerializable()
 class TaskInfoModel {
+  @JsonKey(name: 'timeframes')
   final TimeFramesModel timeFrames;
   final TaskTypeModel title;
 

@@ -7,5 +7,16 @@
   "jeremy_robson" : "Jeremy Robson",
   "daily" : "Daily",
   "monthly" : "Monthly",
-  "weekly" : "Weekly"
+  "weekly" : "Weekly",
+  "retry" : "Retry",
+  "work" : "Work",
+  "play" : "Play",
+  "study" : "Study",
+  "exercise" : "Exercise",
+  "selfCare" : "Self Care",
+  "social" : "Social",
+  "hrs" : "hrs",
+  "yesterday" : "Yesterday",
+  "last_week" : "Last Week",
+  "last_month" : "Last Month"
 }

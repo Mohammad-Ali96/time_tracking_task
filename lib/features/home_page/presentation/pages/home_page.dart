@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:time_tracking/core/presentation/resources/color_repository.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_loader.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_utils.dart';
 import 'package:time_tracking/features/home_page/domain/entities/enum/interval.dart';
+import 'package:time_tracking/features/home_page/presentation/widgets/task_tab.dart';
 import 'package:time_tracking/gen/assets.gen.dart';
 
 class HomePage extends StatefulWidget {
@@ -136,106 +136,10 @@ class HomePageState extends State<HomePage>
               Expanded(
                 child: TabBarView(
                   controller: tabController,
-                  children: [
-                    ListView(
-                      children: [
-                        Container(
-                            height: 220.h,
-                            decoration: BoxDecoration(
-                              color: ColorRepository.lightRedWork,
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(16)),
-                            ),
-                            child: Stack(
-                              alignment: Alignment.topRight,
-                              children: [
-                                Positioned(
-                                  top: -10,
-                                  right: 10,
-                                  child: Row(
-                                    children: [
-                                      SvgPicture.asset(
-                                        Assets.icons.task.iconWork,
-                                        fit: BoxFit.fitHeight,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                                Positioned(
-                                  bottom: 0,
-                                  child: Container(
-                                    height: 174.h,
-                                    width:
-                                        MediaQuery.of(context).size.width - 32,
-                                    padding: const EdgeInsets.all(16),
-                                    decoration: BoxDecoration(
-                                      color: ColorRepository.darkBlue,
-                                      borderRadius: const BorderRadius.all(
-                                          Radius.circular(16)),
-                                    ),
-                                    child: Column(
-                                      children: [
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            const Flexible(
-                                              child: Text(
-                                                'Play',
-                                                style: TextStyle(
-                                                    color: Colors.white,
-                                                    fontSize: 20,
-                                                    fontWeight:
-                                                        FontWeight.w500),
-                                              ),
-                                            ),
-                                            IconButton(
-                                              onPressed: () {},
-                                              icon: SvgPicture.asset(
-                                                Assets
-                                                    .icons.general.iconEllipsis,
-                                                fit: BoxFit.fitHeight,
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                        const SizedBox(
-                                          height: 8,
-                                        ),
-                                        Row(
-                                          mainAxisAlignment:
-                                              MainAxisAlignment.spaceBetween,
-                                          children: [
-                                            const Flexible(
-                                              child: Text(
-                                                '32hrs',
-                                                style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 30,
-                                                ),
-                                              ),
-                                            ),
-                                            Flexible(
-                                              child: Text(
-                                                'Last Week - 8hrs',
-                                                style: TextStyle(
-                                                  color: Colors.grey.shade300,
-                                                  fontSize: 16,
-                                                ),
-                                              ),
-                                            ),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            )),
-                      ],
-                    ),
-                    Container(),
-                    Container(),
+                  children: const [
+                    TaskTab(interval: IntervalEnum.daily),
+                    TaskTab(interval: IntervalEnum.weekly),
+                    TaskTab(interval: IntervalEnum.monthly),
                   ],
                 ),
               ),

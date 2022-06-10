@@ -1,1 +1,1 @@
-enum TaskType { work, play, study, exercise, social, selfCar }
+enum TaskType { work, play, study, exercise, social, selfCare }
