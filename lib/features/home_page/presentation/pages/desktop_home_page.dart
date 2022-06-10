@@ -110,8 +110,6 @@ class DesktopHomePageState extends State<DesktopHomePage> with TickerProviderSta
                                     fontWeight: FontWeight.w400),
                                 unselectedLabelColor:
                                 ColorRepository.desaturatedBlue,
-//                                padding: EdgeInsets.all(0),
-//                                indicatorPadding: EdgeInsets.all(0),
                                 indicatorSize: TabBarIndicatorSize.label,
                                 tabs: IntervalEnum.values
                                     .map(

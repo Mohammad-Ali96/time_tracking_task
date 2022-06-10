@@ -20,7 +20,7 @@ class TaskWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 220.h,
+        height: 190.h,
         decoration: BoxDecoration(
           color: TaskHelper.getBackgroundColor(task.title),
           borderRadius: const BorderRadius.all(Radius.circular(16)),
@@ -43,7 +43,7 @@ class TaskWidget extends StatelessWidget {
             Positioned(
               bottom: 0,
               child: Container(
-                height: 174.h,
+                height: 144.h,
                 width: MediaQuery.of(context).size.width - 32,
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(

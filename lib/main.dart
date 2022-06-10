@@ -14,7 +14,9 @@ Future<void> main() async {
   await configureInjection(AppEnvironment.dev);
 
 
-  await DesktopWindow.setMinWindowSize(const Size(1440,600));
+  if(Platform.isWindows){
+    await DesktopWindow.setMinWindowSize(const Size(1440,600));
+  }
 
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
