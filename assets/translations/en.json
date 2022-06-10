@@ -1,3 +1,8 @@
 {
-
+  "unauthenticated_message": "UN AUTHENTICATED",
+  "access_denied_message": "ACCESS DENIED MESSAGE",
+  "error_message": "Something went wrong, please try again.",
+  "no_internet_connection_message": "NO INTERNET, PLEASE CHECK YOUR CONNECTION.",
+  "report_for": "Report for",
+  "jeremy_robson" : "Jeremy Robson"
 }

@@ -65,7 +65,7 @@ class AppDarkColorScheme extends AppColorScheme {
 
   @override
   // Color get secondaryFontColor => const Color(0xff979797);
-  Color get secondaryFontColor => const Color(0xffC5C5C5);
+  Color get secondaryFontColor => const Color(0xffFFFFFF);
 
   @override
   Color get infoTextColor => const Color(0xff979797);

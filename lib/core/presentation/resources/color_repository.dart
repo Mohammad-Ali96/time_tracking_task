@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
 class ColorRepository {
-  static Color blue = HSLColor.fromAHSL(246, 80, 60, 1.0).toColor();
+  static Color blue = const HSLColor.fromAHSL(1.0, 246, 0.8, 0.6).toColor();
   static Color lightRedWork = HSLColor.fromAHSL(15, 100, 70, 1.0).toColor();
   static Color lightRedStudy = HSLColor.fromAHSL(348, 100, 68, 1.0).toColor();
   static Color softBluePlay = HSLColor.fromAHSL(195, 74, 62, 1.0).toColor();
   static Color limeGreen = HSLColor.fromAHSL(145, 58, 55, 1.0).toColor();
   static Color violet = HSLColor.fromAHSL(264, 64, 52, 1.0).toColor();
   static Color softOrange = HSLColor.fromAHSL(43, 84, 65, 1.0).toColor();
-  static Color doubleDarkBlue = HSLColor.fromAHSL(226, 43, 10, 1.0).toColor();
-  static Color darkBlue = HSLColor.fromAHSL(235, 46, 20, 1.0).toColor();
-  static Color desaturatedBlue = HSLColor.fromAHSL(235, 45, 61, 1.0).toColor();
-  static Color paleBlue = HSLColor.fromAHSL(236, 100, 87, 1.0).toColor();
+  static Color doubleDarkBlue = const HSLColor.fromAHSL(1.0, 226, 0.43, 0.1).toColor();
+  static Color darkBlue = const HSLColor.fromAHSL(1.0, 235, 0.46, 0.2).toColor();
+  static Color desaturatedBlue = const HSLColor.fromAHSL(1.0, 235, 0.45, 0.61).toColor();
+  static Color paleBlue = const HSLColor.fromAHSL(1.0, 236, 1.0, 0.87).toColor();
 
 
 }

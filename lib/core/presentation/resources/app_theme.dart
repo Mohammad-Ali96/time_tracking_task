@@ -46,7 +46,7 @@ class AppTheme {
       textTheme: Theme.of(context).textTheme.apply(
             displayColor: appColorScheme.primaryFontColor,
             bodyColor: appColorScheme.secondaryFontColor,
-            fontFamily: 'Butler',
+            fontFamily: 'IBMPlexSans',
           ),
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
