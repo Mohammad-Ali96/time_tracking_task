@@ -161,12 +161,13 @@ class HomePageState extends State<HomePage>
                                     ],
                                   ),
                                 ),
-
                                 Positioned(
                                   bottom: 0,
                                   child: Container(
                                     height: 174.h,
-                                    width: MediaQuery.of(context).size.width - 32,
+                                    width:
+                                        MediaQuery.of(context).size.width - 32,
+                                    padding: const EdgeInsets.all(16),
                                     decoration: BoxDecoration(
                                       color: ColorRepository.darkBlue,
                                       borderRadius: const BorderRadius.all(
@@ -174,8 +175,57 @@ class HomePageState extends State<HomePage>
                                     ),
                                     child: Column(
                                       children: [
-                                        Expanded(child: Row()),
-                                        Expanded(child: Row()),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            const Flexible(
+                                              child: Text(
+                                                'Play',
+                                                style: TextStyle(
+                                                    color: Colors.white,
+                                                    fontSize: 20,
+                                                    fontWeight:
+                                                        FontWeight.w500),
+                                              ),
+                                            ),
+                                            IconButton(
+                                              onPressed: () {},
+                                              icon: SvgPicture.asset(
+                                                Assets
+                                                    .icons.general.iconEllipsis,
+                                                fit: BoxFit.fitHeight,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        Row(
+                                          mainAxisAlignment:
+                                              MainAxisAlignment.spaceBetween,
+                                          children: [
+                                            const Flexible(
+                                              child: Text(
+                                                '32hrs',
+                                                style: TextStyle(
+                                                  color: Colors.white,
+                                                  fontSize: 30,
+                                                ),
+                                              ),
+                                            ),
+                                            Flexible(
+                                              child: Text(
+                                                'Last Week - 8hrs',
+                                                style: TextStyle(
+                                                  color: Colors.grey.shade300,
+                                                  fontSize: 16,
+                                                ),
+                                              ),
+                                            ),
+                                          ],
+                                        ),
                                       ],
                                     ),
                                   ),
