@@ -4,5 +4,8 @@
   "error_message": "Something went wrong, please try again.",
   "no_internet_connection_message": "NO INTERNET, PLEASE CHECK YOUR CONNECTION.",
   "report_for": "Report for",
-  "jeremy_robson" : "Jeremy Robson"
+  "jeremy_robson" : "Jeremy Robson",
+  "daily" : "Daily",
+  "monthly" : "Monthly",
+  "weekly" : "Weekly"
 }

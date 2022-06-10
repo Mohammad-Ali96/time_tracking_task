@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:time_tracking/core/presentation/resources/color_repository.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_loader.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_utils.dart';
+import 'package:time_tracking/features/home_page/domain/enum/interval.dart';
 import 'package:time_tracking/gen/assets.gen.dart';
 
 class HomePage extends StatefulWidget {
@@ -94,8 +94,34 @@ class HomePageState extends State<HomePage> with ScreenUtils, ScreenLoader {
                       ),
                     ),
                     Container(
-//                      color: Colors.red,
                       height: 86.h,
+                      child: DefaultTabController(
+                        length: IntervalEnum.values.length,
+                        child: Column(
+                          children: [
+                            Expanded(
+                              child: TabBar(
+                                indicator: const BoxDecoration(
+                                  backgroundBlendMode: null,
+                                ),
+                                labelStyle: const TextStyle(
+                                    fontSize: 16,
+                                    wordSpacing: 1.4,
+                                    fontWeight: FontWeight.w400),
+                                unselectedLabelColor:
+                                    ColorRepository.desaturatedBlue,
+                                tabs: IntervalEnum.values
+                                    .map(
+                                      (interval) => Tab(
+                                        child: Text(interval.name.tr()),
+                                      ),
+                                    )
+                                    .toList(),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),

@@ -40,7 +40,7 @@ class AppTheme {
         elevation: 0,
         titleTextStyle: TextStyle(
             color: appColorScheme.primaryFontColor,
-            fontFamily: 'Butler',
+            fontFamily: 'IBMPlexSans',
             height: 1.0),
       ),
       textTheme: Theme.of(context).textTheme.apply(
@@ -64,7 +64,7 @@ class AppTheme {
           textStyle: MaterialStateProperty.all(TextStyle(
             color: appColorScheme.buttonTextColor,
             fontSize: 18,
-            fontFamily: 'Butler',
+            fontFamily: 'IBMPlexSans',
             height: 1.0,
           )),
         ),
@@ -88,13 +88,13 @@ class AppTheme {
           textStyle: MaterialStateProperty.all(TextStyle(
             color: appColorScheme.accentColor,
             fontSize: 18,
-            fontFamily: 'Butler',
+            fontFamily: 'IBMPlexSans',
             height: 1.0,
           )),
         ),
       ),
       unselectedWidgetColor: appColorScheme.infoTextColor,
-      fontFamily: 'Butler',
+      fontFamily: 'IBMPlexSans',
     );
   }
 

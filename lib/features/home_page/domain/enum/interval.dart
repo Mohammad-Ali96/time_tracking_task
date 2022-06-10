@@ -1,4 +1,4 @@
-enum Interval{
+enum IntervalEnum{
   daily,
   weekly,
   monthly,

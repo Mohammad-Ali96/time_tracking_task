@@ -1,8 +1,8 @@
 import 'package:time_tracking/features/home_page/domain/enum/interval.dart';
 
-enum IntervalModel { daily, weekly, monthly }
+enum IntervalEnumModel { daily, weekly, monthly }
 
-extension MapToDomain on IntervalModel {
-  Interval toDomain() =>
-      Interval.values.firstWhere((element) => element.name == name);
+extension MapToDomain on IntervalEnumModel {
+  IntervalEnum toDomain() =>
+      IntervalEnum.values.firstWhere((element) => element.name == name);
 }
