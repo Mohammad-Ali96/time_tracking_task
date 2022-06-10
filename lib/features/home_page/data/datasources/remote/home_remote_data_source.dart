@@ -1,5 +1,4 @@
-import 'dart:io';
-
+// ignore: depend_on_referenced_packages
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:retrofit/retrofit.dart';
@@ -10,7 +9,6 @@ part 'home_remote_data_source.g.dart';
 
 abstract class HomeRemoteDataSource {
   Future<List<TaskInfoModel>> getTasks();
-
 }
 
 @LazySingleton(as: HomeRemoteDataSource)
@@ -24,5 +22,4 @@ abstract class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   @override
   @GET('/time-tracking')
   Future<List<TaskInfoModel>> getTasks();
-
 }
