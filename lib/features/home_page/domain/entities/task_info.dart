@@ -1,5 +1,5 @@
+import 'package:time_tracking/features/home_page/domain/entities/enum/task_type.dart';
 import 'package:time_tracking/features/home_page/domain/entities/time_frames.dart';
-import 'package:time_tracking/features/home_page/domain/enum/task_type.dart';
 
 class TaskInfo {
   final TimeFrames timeFrames;

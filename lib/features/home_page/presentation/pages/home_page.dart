@@ -5,7 +5,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:time_tracking/core/presentation/resources/color_repository.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_loader.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_utils.dart';
-import 'package:time_tracking/features/home_page/domain/enum/interval.dart';
+import 'package:time_tracking/features/home_page/domain/entities/enum/interval.dart';
 import 'package:time_tracking/gen/assets.gen.dart';
 
 class HomePage extends StatefulWidget {

@@ -1,4 +1,5 @@
-import 'package:time_tracking/features/home_page/domain/enum/interval.dart';
+
+import 'package:time_tracking/features/home_page/domain/entities/enum/interval.dart';
 
 enum IntervalEnumModel { daily, weekly, monthly }
 
