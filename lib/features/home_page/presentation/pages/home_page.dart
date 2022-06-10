@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:time_tracking/core/presentation/resources/color_repository.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_loader.dart';
 import 'package:time_tracking/core/presentation/widgets/screen_utils.dart';
@@ -14,9 +15,14 @@ class HomePage extends StatefulWidget {
   HomePageState createState() => HomePageState();
 }
 
-class HomePageState extends State<HomePage> with ScreenUtils, ScreenLoader {
+class HomePageState extends State<HomePage>
+    with TickerProviderStateMixin, ScreenUtils, ScreenLoader {
+  late final TabController tabController;
+
   @override
   void initState() {
+    tabController =
+        TabController(length: IntervalEnum.values.length, vsync: this);
     super.initState();
   }
 
@@ -93,7 +99,7 @@ class HomePageState extends State<HomePage> with ScreenUtils, ScreenLoader {
                         ),
                       ),
                     ),
-                    Container(
+                    SizedBox(
                       height: 86.h,
                       child: DefaultTabController(
                         length: IntervalEnum.values.length,
@@ -101,6 +107,7 @@ class HomePageState extends State<HomePage> with ScreenUtils, ScreenLoader {
                           children: [
                             Expanded(
                               child: TabBar(
+                                controller: tabController,
                                 indicator: const BoxDecoration(
                                   backgroundBlendMode: null,
                                 ),
@@ -123,6 +130,62 @@ class HomePageState extends State<HomePage> with ScreenUtils, ScreenLoader {
                         ),
                       ),
                     ),
+                  ],
+                ),
+              ),
+              Expanded(
+                child: TabBarView(
+                  controller: tabController,
+                  children: [
+                    ListView(
+                      children: [
+                        Container(
+                            height: 220.h,
+                            decoration: BoxDecoration(
+                              color: ColorRepository.lightRedWork,
+                              borderRadius:
+                                  const BorderRadius.all(Radius.circular(16)),
+                            ),
+                            child: Stack(
+                              alignment: Alignment.topRight,
+                              children: [
+                                Positioned(
+                                  top: -10,
+                                  right: 10,
+                                  child: Row(
+                                    children: [
+                                      SvgPicture.asset(
+                                        Assets.icons.task.iconWork,
+                                        fit: BoxFit.fitHeight,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+
+                                Positioned(
+                                  bottom: 0,
+                                  child: Container(
+                                    height: 174.h,
+                                    width: MediaQuery.of(context).size.width - 32,
+                                    decoration: BoxDecoration(
+                                      color: ColorRepository.darkBlue,
+                                      borderRadius: const BorderRadius.all(
+                                          Radius.circular(16)),
+                                    ),
+                                    child: Column(
+                                      children: [
+                                        Expanded(child: Row()),
+                                        Expanded(child: Row()),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            )),
+                      ],
+                    ),
+                    Container(),
+                    Container(),
                   ],
                 ),
               ),
