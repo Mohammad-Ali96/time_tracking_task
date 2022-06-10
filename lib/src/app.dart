@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:time_tracking/core/presentation/routes/app_router.dart' as router;
 
-
+import 'dart:io' show Platform;
 class App extends StatefulWidget {
   const App({Key? key}) : super(key: key);
 
@@ -26,7 +26,9 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(375, 812),
+        designSize:
+        Platform.isWindows ? const Size(1440,600):
+        const Size(375, 812),
         builder: (context, c) {
           SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
           return MaterialApp.router(
