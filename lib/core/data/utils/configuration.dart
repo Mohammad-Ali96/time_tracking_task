@@ -9,20 +9,20 @@ abstract class Configuration {
 @LazySingleton(as: Configuration, env: [AppEnvironment.dev])
 class DevConfiguration implements Configuration {
   @override
-  String get getBaseUrl => 'https://wookie.codesubmit.io/time-tracking';
+  String get getBaseUrl => 'https://wookie.codesubmit.io';
 
 }
 
 @LazySingleton(as: Configuration, env: [AppEnvironment.staging])
 class StagingConfiguration implements Configuration {
   @override
-  String get getBaseUrl => 'https://wookie.codesubmit.io/time-tracking';
+  String get getBaseUrl => 'https://wookie.codesubmit.io';
 
 }
 
 @LazySingleton(as: Configuration, env: [AppEnvironment.prod])
 class ProductionConfiguration implements Configuration {
   @override
-  String get getBaseUrl => 'https://wookie.codesubmit.io/time-tracking';
+  String get getBaseUrl => 'https://wookie.codesubmit.io';
 
 }
